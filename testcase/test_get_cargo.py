@@ -22,7 +22,7 @@ class GetCargo(unittest.TestCase):
         self.title = u'用户登录_EXSOFT'
         # self.gc_title = u'收货'
         self.login_page = page_login.loginIn(self.driver)
-        self.gc = page_gc.GCPage()
+        self.gc = page_gc.GCPage(self.driver)
         self.mylog = log.log()
 
     def tearDown(self):
