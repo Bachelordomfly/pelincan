@@ -1,9 +1,17 @@
 # coding:utf-8
 import unittest, time
+import sys
+import os
+os.chdir('/root/.jenkins/workspace/ldx-testcase')
+for file in os.listdir(os.getcwd()):
+     print(file)
+sys.path.append('/root/.jenkins/workspace/ldx-testcase')
 from runcase import HTMLTestReportCN
 from config.globalparameter import test_case_path, report_name
 from config import send_email
 import testcase
+
+
 '''
 构建测试套件，并执行测试
 '''
